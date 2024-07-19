@@ -1,13 +1,22 @@
+// src/App.js
 import React from 'react';
-import ExampleComponent from './components/ExampleComponent';
+import { Routes, Route } from 'react-router-dom';
+import Accueil from './pages/Accueil';
+import Apropos from './pages/Apropos';
+import NotFound from './pages/NotFound';
+import Header from './components/Header';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello, React!</h1>
-      <ExampleComponent />
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/Apropos" element={<Apropos />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
