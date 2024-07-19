@@ -1,8 +1,8 @@
 // src/App.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Accueil from './pages/Accueil';
-import Apropos from './pages/Apropos';
+import Home from './pages/Home';
+import About from './pages/About';
 import NotFound from './pages/NotFound';
 import Header from './components/Header';
 
@@ -11,8 +11,8 @@ const App = () => {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<Accueil />} />
-        <Route path="/Apropos" element={<Apropos />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
