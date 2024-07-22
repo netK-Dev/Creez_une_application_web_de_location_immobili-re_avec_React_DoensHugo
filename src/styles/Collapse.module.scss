@@ -1,0 +1,36 @@
+/* src/assets/styles/Collapse.module.scss */
+.collapseContainer {
+  margin: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cont {
+  background-color: #ff6060;
+  border-radius: 5px;
+  color: white;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrowDown,
+.arrowUp {
+  font-size: 16px;
+}
+
+.content {
+  border-radius: 0 0 5px 5px;
+  background-color: #f6f6f673;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.expanded {
+  padding: 20px;
+  max-height: 500px;
+}

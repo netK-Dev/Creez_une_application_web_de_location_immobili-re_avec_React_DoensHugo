@@ -1,7 +1,12 @@
 import React from 'react';
+import Collapse from '../components/Collapse';
 
 const About = () => {
-  return <h1>A Propos</h1>;
+  return (
+    <Collapse title="test">
+      <p>hello test !!</p>
+    </Collapse>
+  );
 };
 
 export default About;
