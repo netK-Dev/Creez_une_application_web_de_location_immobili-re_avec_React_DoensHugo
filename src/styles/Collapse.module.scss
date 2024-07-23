@@ -1,8 +1,11 @@
-/* src/assets/styles/Collapse.module.scss */
+// src/assets/styles/Collapse.module.scss
+
 .collapseContainer {
-  margin: 20px;
-  border-radius: 4px;
+  border-radius: 5px;
   overflow: hidden;
+  max-width: 1023px; // Assure que le conteneur ne dépasse pas cette largeur
+  width: 100%; // Utilise toute la largeur disponible dans max-width
+  box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
 }
 
 .cont {
@@ -16,6 +19,9 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  width: 100%; // Assure que l'en-tête utilise toute la largeur du conteneur
+  box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
+  height: 54px; // Hauteur fixe de 54px
 }
 
 .arrowDown,
@@ -28,9 +34,13 @@
   background-color: #f6f6f673;
   max-height: 0;
   overflow: hidden;
+  width: 100%; // Assure que le contenu utilise toute la largeur du conteneur
+  box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
 }
 
 .expanded {
   padding: 20px;
-  max-height: 500px;
+  max-height: 500px; // Hauteur maximale quand le contenu est étendu
+  width: 100%; // Assure que le contenu utilise toute la largeur du conteneur
+  box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
 }
