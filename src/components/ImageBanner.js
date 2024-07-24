@@ -2,7 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/Banner.module.scss';
 
-const ImageBanner = ({ imageSrc, alt, marginTop, opacity, text }) => {
+const ImageBanner = ({
+  imageSrc,
+  alt,
+  marginTop = '38px',
+  opacity = 0.6, // Paramètre par défaut
+  text = '', // Paramètre par défaut
+}) => {
   const overlayStyle = {
     backgroundColor: `rgba(0, 0, 0, ${opacity})`,
   };
@@ -22,12 +28,6 @@ ImageBanner.propTypes = {
   marginTop: PropTypes.string,
   opacity: PropTypes.number,
   text: PropTypes.string,
-};
-
-ImageBanner.defaultProps = {
-  marginTop: '38px',
-  opacity: 0.3,
-  text: '',
 };
 
 export default ImageBanner;
