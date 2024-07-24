@@ -1,17 +1,15 @@
 import React from 'react';
 import Collapse from '../components/Collapse';
 import styles from '../styles/About.module.scss';
+import ImageBanner from '../components/ImageBanner';
 
 const About = () => {
   return (
     <div className={styles.page}>
-      <div className={styles.contImg}>
-        <img
-          src="img/kalen-emsley-Bkci_8qcdvQ-unsplash 2.webp"
-          className={styles.img}
-          alt="Vue panoramique d'une vallée entourée de montagnes enneigées avec un arbre vert à gauche"
-        />
-      </div>
+      <ImageBanner
+        imageSrc="/img/IMG_About.webp"
+        alt="Vue panoramique d'une vallée entourée de montagnes enneigées avec un arbre vert à gauche"
+      />
       <div className={styles.contCollapse}>
         <Collapse title="Fiabilité" width="1023px">
           <p>
