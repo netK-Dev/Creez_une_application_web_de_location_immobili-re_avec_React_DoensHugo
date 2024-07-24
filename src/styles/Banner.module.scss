@@ -1,42 +1,30 @@
-.contImg {
-  width: 100%;
-  max-height: 223px;
-  overflow: hidden; // cache les parties de l'image qui dépassent
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; // assure que les pseudo-éléments sont relatifs à ce conteneur
-  border-radius: 15px;
-}
+// Variables
+$border-radius: 25px;
+$text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-.contImg::after {
+// Mixins
+@mixin position-absolute-full {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); // Opacité par défaut
-  z-index: 2;
-  border-radius: 25px;
 }
 
-.img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: cover;
-  object-position: center;
-  position: relative;
-  z-index: 1;
-  border-radius: 25px;
+@mixin border-radius($radius) {
+  border-radius: $radius;
 }
 
-.text {
-  position: absolute;
-  z-index: 3;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-style {
   color: #fff;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: $text-shadow;
   font-family: 'Montserrat', sans-serif;
   font-size: 48px;
   font-style: normal;
@@ -44,7 +32,46 @@
   line-height: 142.6%; /* 68.448px */
   text-align: center;
   padding: 20px;
-  border-radius: 25px;
+}
+
+// Placeholder selectors
+%common-img-style {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+// Styles
+.contImg {
+  width: 100%;
+  max-height: 223px;
+  overflow: hidden;
+  @include flex-center;
+  position: relative;
+  @include border-radius(15px);
+}
+
+.overlay {
+  @include position-absolute-full;
+  background: rgba(0, 0, 0, 0.6); // Opacité par défaut modifiée
+  z-index: 2;
+  @include border-radius($border-radius);
+}
+
+.img {
+  @extend %common-img-style;
+  @include border-radius($border-radius);
+}
+
+.text {
+  position: absolute;
+  z-index: 3;
+  @include text-style;
+  @include border-radius($border-radius);
 }
 
 .opacity03::after {
