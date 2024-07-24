@@ -13,28 +13,28 @@ const About = () => {
         />
       </div>
       <div className={styles.contCollapse}>
-        <Collapse title="Fiabilité">
+        <Collapse title="Fiabilité" width="1023px">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont
             régulièrement vérifiées par nos équipes.
           </p>
         </Collapse>
-        <Collapse title="Respect">
+        <Collapse title="Respect" width="1023px">
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
             comportement discriminatoire ou de perturbation du voisinage
             entraînera une exclusion de notre plateforme.
           </p>
         </Collapse>
-        <Collapse title="Service">
+        <Collapse title="Service" width="1023px">
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
             comportement discriminatoire ou de perturbation du voisinage
             entraînera une exclusion de notre plateforme.
           </p>
         </Collapse>
-        <Collapse title="Sécurité">
+        <Collapse title="Sécurité" width="1023px">
           <p>
             La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
             pour les voyageurs, chaque logement correspond aux critères de

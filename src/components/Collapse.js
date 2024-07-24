@@ -3,7 +3,7 @@ import Up from '../asset/arrowUp.svg';
 import Down from '../asset/arrowDown.svg';
 import styles from '../styles/Collapse.module.scss';
 
-const Collapse = ({ title, children }) => {
+const Collapse = ({ title, children, width }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapse = () => {
@@ -11,7 +11,7 @@ const Collapse = ({ title, children }) => {
   };
 
   return (
-    <div className={styles.collapseContainer}>
+    <div className={styles.collapseContainer} style={{ maxWidth: width }}>
       <div className={styles.cont} onClick={toggleCollapse}>
         <span>{title}</span>
         <span className={isCollapsed ? styles.arrowDown : styles.arrowUp}>

@@ -1,10 +1,7 @@
-// src/assets/styles/Collapse.module.scss
-
 .collapseContainer {
   border-radius: 5px;
   overflow: hidden;
-  max-width: 1023px; // Assure que le conteneur ne dépasse pas cette largeur
-  width: 100%; // Utilise toute la largeur disponible dans max-width
+  width: 100%; // Utilise toute la largeur disponible définie par le style inline
   box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
 }
 
@@ -19,9 +16,9 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  width: 100%; // Assure que l'en-tête utilise toute la largeur du conteneur
-  box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
-  height: 54px; // Hauteur fixe de 54px
+  width: 100%;
+  box-sizing: border-box;
+  height: 54px;
 }
 
 .arrowDown,
@@ -34,13 +31,13 @@
   background-color: #f6f6f673;
   max-height: 0;
   overflow: hidden;
-  width: 100%; // Assure que le contenu utilise toute la largeur du conteneur
-  box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .expanded {
   padding: 20px;
-  max-height: 500px; // Hauteur maximale quand le contenu est étendu
-  width: 100%; // Assure que le contenu utilise toute la largeur du conteneur
-  box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
+  max-height: 500px;
+  width: 100%;
+  box-sizing: border-box;
 }
