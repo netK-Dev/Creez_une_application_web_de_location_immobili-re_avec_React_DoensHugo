@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from '../styles/Header.module.scss';
 
 const Header = () => {
@@ -9,10 +9,25 @@ const Header = () => {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <Link to="/">Accueil</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+              end
+            >
+              Accueil
+            </NavLink>
           </li>
           <li>
-            <Link to="/About">À Propos</Link>
+            <NavLink
+              to="/About"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              À Propos
+            </NavLink>
           </li>
         </ul>
       </nav>
