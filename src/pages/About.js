@@ -9,6 +9,8 @@ const About = () => {
       <ImageBanner
         imageSrc="/img/IMG_About.webp"
         alt="Vue panoramique d'une vallée entourée de montagnes enneigées avec un arbre vert à gauche"
+        opacity={0.3}
+        marginTop="38px"
       />
       <div className={styles.contCollapse}>
         <Collapse title="Fiabilité" width="1023px">
