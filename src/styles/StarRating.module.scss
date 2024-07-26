@@ -1,0 +1,13 @@
+.starRating {
+  display: flex;
+  justify-content: space-between;
+  width: 196px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.star {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
