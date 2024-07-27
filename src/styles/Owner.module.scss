@@ -1,6 +1,7 @@
 .ownerContainer {
   display: flex;
   align-items: center; /* Centre verticalement le texte et l'image */
+  justify-content: flex-end;
   gap: 10px;
 }
 
