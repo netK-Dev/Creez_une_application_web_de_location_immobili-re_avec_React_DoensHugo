@@ -1,6 +1,7 @@
 // src/pages/PropertyDetail.js
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
+import PropertyTag from '../components/PropertyTag';
 
 const PropertyDetail = ({ properties }) => {
   const { id } = useParams();
@@ -11,7 +12,12 @@ const PropertyDetail = ({ properties }) => {
     return <Navigate to="/404" />;
   }
 
-  return <div></div>;
+  return (
+    <div>
+      <h1>{property.title}</h1>
+      <PropertyTag tags={property.tags} />
+    </div>
+  );
 };
 
 export default PropertyDetail;

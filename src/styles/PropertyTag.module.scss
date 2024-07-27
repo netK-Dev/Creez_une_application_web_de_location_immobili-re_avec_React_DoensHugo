@@ -1,0 +1,23 @@
+.tagContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  display: flex;
+  padding: 2px 20px 2px 20px;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.6%; /* 19.964px */
+  width: auto;
+  height: 25px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #ff6060;
+  justify-content: center;
+  align-items: center;
+}
