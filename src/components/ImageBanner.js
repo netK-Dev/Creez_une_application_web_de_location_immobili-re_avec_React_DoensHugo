@@ -6,6 +6,7 @@ const ImageBanner = ({
   imageSrc,
   alt,
   marginTop = '38px',
+  height = '223px', // Paramètre par défaut
   opacity = 0.6, // Paramètre par défaut
   text = '', // Paramètre par défaut
 }) => {
@@ -14,7 +15,7 @@ const ImageBanner = ({
   };
 
   return (
-    <div className={styles.contImg} style={{ marginTop }}>
+    <div className={styles.contImg} style={{ marginTop, height }}>
       <img src={imageSrc} className={styles.img} alt={alt} />
       <div className={styles.overlay} style={overlayStyle}></div>
       {text && <div className={styles.text}>{text}</div>}
@@ -26,6 +27,7 @@ ImageBanner.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   marginTop: PropTypes.string,
+  height: PropTypes.string,
   opacity: PropTypes.number,
   text: PropTypes.string,
 };
