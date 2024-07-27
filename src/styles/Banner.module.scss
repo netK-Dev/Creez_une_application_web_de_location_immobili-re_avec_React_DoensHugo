@@ -1,9 +1,6 @@
-/* src/styles/Banner.module.scss */
-
 // Variables
 $border-radius: 25px;
 $text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-$container-width: 1240px;
 
 // Mixins
 @mixin position-absolute-full {
@@ -41,7 +38,7 @@ $container-width: 1240px;
 %common-img-style {
   width: 100%;
   max-width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   object-position: center;
   position: relative;
@@ -50,7 +47,8 @@ $container-width: 1240px;
 
 // Styles
 .contImg {
-  width: $container-width;
+  width: 100%;
+  max-height: 223px;
   overflow: hidden;
   @include flex-center;
   position: relative;
