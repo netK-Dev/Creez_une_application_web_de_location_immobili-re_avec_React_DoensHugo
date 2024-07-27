@@ -1,6 +1,6 @@
 import React from 'react';
-import filledStar from '../asset/StarActive.svg';
-import emptyStar from '../asset/StarEmpty.svg';
+import filledStar from '../assets/StarActive.svg';
+import emptyStar from '../assets/StarEmpty.svg';
 import styles from '../styles/StarRating.module.scss';
 
 const StarRating = ({ rating }) => {

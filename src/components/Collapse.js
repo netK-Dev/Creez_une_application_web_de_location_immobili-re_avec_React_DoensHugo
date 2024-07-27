@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Up from '../asset/arrowUp.svg';
-import Down from '../asset/arrowDown.svg';
+import Up from '../assets/arrowUp.svg';
+import Down from '../assets/arrowDown.svg';
 import styles from '../styles/Collapse.module.scss';
 
 const Collapse = ({ title, children, width }) => {

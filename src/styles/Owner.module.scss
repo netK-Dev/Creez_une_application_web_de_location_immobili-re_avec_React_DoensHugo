@@ -1,0 +1,33 @@
+.ownerContainer {
+  display: flex;
+  align-items: center; /* Centre verticalement le texte et l'image */
+  gap: 10px;
+}
+
+.ownerName {
+  color: #ff6060;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 25.668px */
+}
+
+.imgContainer {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background-color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Assure que l'image est contenue dans la div ronde */
+}
+
+.ownerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Redimensionne l'image pour couvrir la div en gardant les proportions */
+}
