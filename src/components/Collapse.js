@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Up from '../assets/arrowUp.svg';
-import Down from '../assets/arrowDown.svg';
+import Arrow from '../assets/arrow.svg'; // Une seule image pour la flèche
 import styles from '../styles/Collapse.module.scss';
 
 const Collapse = ({ title, children, width }) => {
@@ -14,14 +13,16 @@ const Collapse = ({ title, children, width }) => {
     <div className={styles.collapseContainer} style={{ maxWidth: width }}>
       <div className={styles.cont} onClick={toggleCollapse}>
         <span>{title}</span>
-        <span className={isCollapsed ? styles.arrowDown : styles.arrowUp}>
-          <img src={isCollapsed ? Up : Down} alt="Toggle arrow" />
+        <span
+          className={`${styles.arrow} ${isCollapsed ? '' : styles.rotated}`}
+        >
+          <img src={Arrow} alt="Toggle arrow" />
         </span>
       </div>
       <div
         className={`${styles.content} ${isCollapsed ? '' : styles.expanded}`}
       >
-        {children}
+        <div className={styles.innerContent}>{children}</div>
       </div>
     </div>
   );

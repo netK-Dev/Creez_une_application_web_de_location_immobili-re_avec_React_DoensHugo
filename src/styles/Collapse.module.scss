@@ -21,9 +21,13 @@
   height: 54px;
 }
 
-.arrowDown,
-.arrowUp {
-  font-size: 16px;
+.arrow {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.rotated {
+  transform: rotate(180deg);
 }
 
 .content {
@@ -34,11 +38,23 @@
   width: 100%;
   box-sizing: border-box;
   font-size: 18px;
+  transition: max-height 0.3s ease;
+}
+
+.innerContent {
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .expanded {
-  padding: 20px;
-  max-height: 500px;
-  width: 100%;
-  box-sizing: border-box;
+  max-height: 500px; // Ajustez cette valeur selon la taille du contenu
+}
+
+.expanded .innerContent {
+  opacity: 1;
+  transform: translateY(0);
 }
