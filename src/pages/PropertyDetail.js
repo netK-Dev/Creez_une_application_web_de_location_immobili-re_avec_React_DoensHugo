@@ -40,8 +40,14 @@ const PropertyDetail = ({ properties }) => {
       </div>
 
       <div className={style.propertyInfo2}>
-        <Collapse title="Description" width="582px"></Collapse>
-        <Collapse title="Équipements" width="582px"></Collapse>
+        <Collapse title="Description" width="582px">
+          <p>{property.description}</p>
+        </Collapse>
+        <Collapse title="Équipements" width="582px">
+          {property.equipments.map((equipment, index) => (
+            <p key={index}>{equipment}</p>
+          ))}
+        </Collapse>
       </div>
     </div>
   );
