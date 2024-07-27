@@ -8,7 +8,7 @@ const HomeList = ({ properties }) => {
     <div className={styles.listContainer}>
       {properties.map((property) => (
         <div key={property.id} className={styles.listItem}>
-          <Link to={`/Apartments/${property.id}`} className={styles.link}>
+          <Link to={`/property/${property.id}`} className={styles.link}>
             <div
               className={styles.listImage}
               style={{ backgroundImage: `url(${property.cover})` }}

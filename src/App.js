@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+import PropertyDetail from './pages/PropertyDetail';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/index.scss';
@@ -32,6 +33,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home data={data} />} />
           <Route path="/about" element={<About />} />
+          <Route
+            path="/property/:id"
+            element={<PropertyDetail properties={data} />}
+          />
+          <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
