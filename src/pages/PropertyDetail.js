@@ -2,6 +2,7 @@
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import PropertyTag from '../components/PropertyTag';
+import StarRating from '../components/StarRating';
 
 const PropertyDetail = ({ properties }) => {
   const { id } = useParams();
@@ -16,6 +17,7 @@ const PropertyDetail = ({ properties }) => {
     <div>
       <h1>{property.title}</h1>
       <PropertyTag tags={property.tags} />
+      <StarRating rating={property.rating} />
     </div>
   );
 };
