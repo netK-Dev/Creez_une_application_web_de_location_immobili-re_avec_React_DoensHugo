@@ -1,0 +1,61 @@
+/* src/styles/HomeListing.module.scss */
+
+// Variables
+$background-color: #f6f6f6;
+$text-color: #fff;
+$font-family: 'Montserrat', sans-serif;
+$text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
+// Styles
+.listContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 60px;
+  border-radius: 25px;
+  background: $background-color;
+  width: 100%;
+  max-width: 1240px;
+  margin-top: 42px;
+  padding: 56px 50px 43px 50px;
+  box-sizing: border-box;
+}
+
+.listItem {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 100%; // Aspect ratio 1:1
+}
+
+.link {
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.listImage {
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.listTitle {
+  margin: 20px;
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.6%; // 25.668px
+  text-shadow: $text-shadow;
+}
