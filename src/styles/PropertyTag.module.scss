@@ -20,4 +20,9 @@
   background: #ff6060;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 767px) {
+    height: 18px;
+    font-size: 10px;
+  }
 }

@@ -7,6 +7,11 @@
   overflow: hidden;
   border-radius: 10px;
   background-color: #f0f0f0;
+
+  @media (max-width: 767px) {
+    width: 335px;
+    height: 255px;
+  }
 }
 
 .sliderImage {
@@ -41,6 +46,11 @@
   width: 46.68px;
   height: 79.2px;
   flex-shrink: 0;
+
+  @media (max-width: 767px) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .sliderIndicator {

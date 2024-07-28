@@ -6,6 +6,11 @@
   display: flex;
   align-items: center;
   padding: 0 0px;
+
+  @media (max-width: 767px) {
+    height: auto;
+    margin-top: 20px;
+  }
 }
 
 .nav {
@@ -19,11 +24,19 @@
     margin: 0;
     display: flex;
     gap: 57px;
+
+    @media (max-width: 767px) {
+      gap: 26px;
+    }
   }
 
   li {
     margin: 0;
     font-size: 24px;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
   }
 
   a {
@@ -39,4 +52,9 @@
 .logo {
   height: 48px;
   margin-right: 0px;
+
+  @media (max-width: 767px) {
+    width: 145px;
+    height: 46.881px;
+  }
 }

@@ -10,7 +10,10 @@ const Collapse = ({ title, children, width }) => {
   };
 
   return (
-    <div className={styles.collapseContainer} style={{ maxWidth: width }}>
+    <div
+      className={`${styles.collapseContainer} ${styles.responsiveCollapse}`}
+      style={{ maxWidth: width }}
+    >
       <div className={styles.cont} onClick={toggleCollapse}>
         <span>{title}</span>
         <span
