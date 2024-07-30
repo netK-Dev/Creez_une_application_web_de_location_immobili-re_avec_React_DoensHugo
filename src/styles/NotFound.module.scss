@@ -6,7 +6,7 @@
   gap: 139px;
   align-items: center;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     gap: 113px;
   }
 }
@@ -16,7 +16,7 @@
   width: 597px;
   height: 263px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     width: 198px;
     height: 99px;
   }
@@ -28,7 +28,7 @@
   color: #ff6060;
   font-size: 36px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     text-align: center;
     font-size: 18px;
     font-style: normal;
@@ -44,7 +44,7 @@
   font-size: 18px;
   margin-bottom: 139px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     font-size: 14px;
   }
 }

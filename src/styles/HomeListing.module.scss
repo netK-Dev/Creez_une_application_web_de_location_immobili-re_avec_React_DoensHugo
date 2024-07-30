@@ -19,7 +19,7 @@ $text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   padding: 56px 50px 43px 50px;
   box-sizing: border-box;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);
     background-color: #fff;
     padding: 0;

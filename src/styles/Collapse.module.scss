@@ -4,7 +4,7 @@
   width: 100%; // Utilise toute la largeur disponible définie par le style inline
   box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     width: 335px;
   }
 }
@@ -24,7 +24,7 @@
   box-sizing: border-box;
   height: 54px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     max-width: 335px;
     height: 30px;
     font-size: 16px;
@@ -51,7 +51,7 @@
   font-size: 18px;
   transition: max-height 0.3s ease;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     font-size: 12px;
   }
 }
