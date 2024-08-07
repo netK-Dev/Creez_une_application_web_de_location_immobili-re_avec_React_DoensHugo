@@ -1,11 +1,14 @@
+// src/pages/About.js
 import React from 'react';
 import Collapse from '../components/Collapse';
 import styles from '../styles/About.module.scss';
 import ImageBanner from '../components/ImageBanner';
 
+// Composant About pour la page À propos
 const About = () => {
   return (
     <div className={styles.page}>
+      {/* Bannière avec image*/}
       <ImageBanner
         imageSrc="/img/IMG_About.webp"
         alt="Vue panoramique d'une vallée entourée de montagnes enneigées avec un arbre vert à gauche"
@@ -13,6 +16,7 @@ const About = () => {
         marginTop="38px"
       />
       <div className={styles.contCollapse}>
+        {/* Sections collapsibles pour différentes valeurs de l'entreprise */}
         <Collapse title="Fiabilité" width="1023px">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les

@@ -1,8 +1,11 @@
+// src/components/Owner.js
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from '../styles/Owner.module.scss';
 
+// Composant pour afficher les informations du propriétaire
 const Owner = ({ owner }) => {
+  // Si le propriétaire n'est pas défini, ne rien afficher
   if (!owner) {
     return null;
   }
@@ -21,6 +24,7 @@ const Owner = ({ owner }) => {
   );
 };
 
+// Validation des types de propriétés
 Owner.propTypes = {
   owner: PropTypes.shape({
     name: PropTypes.string.isRequired,

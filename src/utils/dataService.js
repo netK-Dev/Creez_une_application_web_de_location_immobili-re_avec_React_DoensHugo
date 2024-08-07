@@ -1,15 +1,17 @@
 // src/utils/dataService.js
+
+// Fonction pour charger les données à partir d'un fichier JSON
 export async function loadData() {
   try {
-    const response = await fetch('/dataTest.json');
+    const response = await fetch('/dataTest.json'); // Effectue une requête pour obtenir les données JSON
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(`HTTP error! status: ${response.status}`); // Gère les erreurs HTTP
     }
-    const jsonData = await response.json();
+    const jsonData = await response.json(); // Convertit la réponse en JSON
     return jsonData;
   } catch (error) {
     console.log(error);
-    throw error;
+    throw error; // Relance l'erreur pour être gérée ailleurs
   }
 }
 
@@ -17,13 +19,13 @@ export async function loadData() {
 export function preloadImages(data) {
   const images = [];
   data.forEach((item) => {
-    images.push(item.cover);
-    images.push(...item.pictures);
-    images.push(item.host.picture);
+    images.push(item.cover); // Ajoute l'image de couverture
+    images.push(...item.pictures); // Ajoute toutes les images de l'appartement
+    images.push(item.host.picture); // Ajoute l'image du propriétaire
   });
 
   images.forEach((src) => {
     const img = new Image();
-    img.src = src;
+    img.src = src; // Précharge l'image
   });
 }

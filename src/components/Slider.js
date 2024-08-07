@@ -1,3 +1,4 @@
+// src/components/Slider.js
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/Slider.module.scss';
@@ -11,11 +12,13 @@ const Slider = ({ images }) => {
 
   // Fonction pour naviguer vers l'image précédente
   const prevSlide = () => {
+    // Si on est à la première image, aller à la dernière
     setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
   };
 
   // Fonction pour naviguer vers l'image suivante
   const nextSlide = () => {
+    // Si on est à la dernière image, aller à la première
     setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
   };
 
@@ -51,7 +54,7 @@ const Slider = ({ images }) => {
   );
 };
 
-// PropTypes pour vérifier que la prop images est un tableau de chaînes et est obligatoire
+// Vérification des types de props
 Slider.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

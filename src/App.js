@@ -16,9 +16,9 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const apartmentsData = await loadData();
-        setData(apartmentsData);
-        preloadImages(apartmentsData); // Preload images
+        const apartmentsData = await loadData(); // Charger les données des appartements
+        setData(apartmentsData); // Mettre à jour l'état avec les données chargées
+        preloadImages(apartmentsData); // Précharger les images des appartements
       } catch (error) {
         console.error('Error fetching properties:', error);
       }
