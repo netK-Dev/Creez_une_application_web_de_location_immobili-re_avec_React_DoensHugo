@@ -26,7 +26,7 @@ const Header = () => {
                 isActive ? styles.active : undefined
               }
             >
-              À Propos
+              A Propos
             </NavLink>
           </li>
         </ul>

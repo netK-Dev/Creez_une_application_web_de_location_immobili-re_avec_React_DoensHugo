@@ -8,7 +8,7 @@ import PropertyDetail from './pages/PropertyDetail';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/index.scss';
-import { loadData } from './utils/dataService';
+import { loadData, preloadImages } from './utils/dataService';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -18,6 +18,7 @@ const App = () => {
       try {
         const apartmentsData = await loadData();
         setData(apartmentsData);
+        preloadImages(apartmentsData); // Preload images
       } catch (error) {
         console.error('Error fetching properties:', error);
       }
