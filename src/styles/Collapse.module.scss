@@ -1,6 +1,12 @@
-.collapseContainer {
-  border-radius: 5px;
-  overflow: hidden;
+// Variables
+$border-radius: 5px;
+$bg-color: #ff6060;
+$text-color: white;
+$content-bg-color: #f6f6f673;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin responsive-width {
   width: 100%; // Utilise toute la largeur disponible définie par le style inline
   box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
 
@@ -9,23 +15,42 @@
   }
 }
 
-.cont {
-  background-color: #ff6060;
-  border-radius: 5px;
-  color: white;
-  padding: 15px;
-  font-size: 24px;
-  font-weight: 700;
+@mixin flex-center-space-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@mixin transition-transform {
+  transition: transform $transition-duration ease;
+}
+
+@mixin transition-opacity-transform {
+  transition:
+    opacity $transition-duration ease,
+    transform $transition-duration ease;
+}
+
+// Styles
+.collapseContainer {
+  border-radius: $border-radius;
+  overflow: hidden;
+  @include responsive-width;
+}
+
+.cont {
+  background-color: $bg-color;
+  border-radius: $border-radius;
+  color: $text-color;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: 700;
   cursor: pointer;
-  width: 100%;
-  box-sizing: border-box;
   height: 54px;
+  @include flex-center-space-between;
+  @include responsive-width;
 
   @media (max-width: 1024px) {
-    max-width: 335px;
     height: 30px;
     font-size: 16px;
     padding: 10px;
@@ -34,7 +59,7 @@
 
 .arrow {
   display: flex;
-  transition: transform 0.3s ease;
+  @include transition-transform;
 }
 
 .rotated {
@@ -42,14 +67,13 @@
 }
 
 .content {
-  border-radius: 0 0 5px 5px;
-  background-color: #f6f6f673;
+  border-radius: 0 0 $border-radius $border-radius;
+  background-color: $content-bg-color;
   max-height: 0;
   overflow: hidden;
-  width: 100%;
-  box-sizing: border-box;
+  @include responsive-width;
   font-size: 18px;
-  transition: max-height 0.3s ease;
+  transition: max-height $transition-duration ease;
 
   @media (max-width: 1024px) {
     font-size: 12px;
@@ -60,9 +84,7 @@
   padding: 20px;
   opacity: 0;
   transform: translateY(-100px);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+  @include transition-opacity-transform;
 }
 
 .expanded {
