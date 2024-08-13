@@ -10,7 +10,7 @@ $transition-duration: 0.3s;
   box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
 
   @media (max-width: 767px) {
-    width: 335px;
+    max-width: 335px;
   }
 }
 

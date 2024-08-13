@@ -13,12 +13,20 @@
     height: auto;
     margin-top: 20px;
   }
+  @media (max-width: 230px) {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 .nav {
   margin-left: auto;
   display: flex;
   align-items: center;
+
+  @media (max-width: 230px) {
+    margin: 0;
+  }
 
   ul {
     list-style-type: none;
