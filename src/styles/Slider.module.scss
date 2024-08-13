@@ -1,14 +1,15 @@
 /* src/styles/Slider.module.scss */
 .sliderContainer {
   position: relative;
-  width: 1240px;
+  width: 100%;
+  max-width: 1240px;
   height: 415px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
   background-color: #f0f0f0;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     width: 335px;
     height: 255px;
   }
@@ -47,7 +48,7 @@
   height: 79.2px;
   flex-shrink: 0;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     width: 24px;
     height: 24px;
   }

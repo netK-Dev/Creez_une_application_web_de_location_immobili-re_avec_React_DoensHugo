@@ -16,7 +16,7 @@
   font-weight: 500;
   line-height: 142.6%; /* 25.668px */
 
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     font-size: 12px;
   }
 }
@@ -32,7 +32,7 @@
   align-items: center;
   overflow: hidden; /* Assure que l'image est contenue dans la div ronde */
 
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     height: 32px;
     width: 32px;
   }

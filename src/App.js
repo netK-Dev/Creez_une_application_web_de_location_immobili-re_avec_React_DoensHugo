@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <div className="page">
-      <div className="app">
+      <div className="main">
         <Header />
         <Routes>
           <Route path="/" element={<Home data={data} />} />

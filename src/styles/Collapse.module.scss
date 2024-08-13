@@ -12,7 +12,7 @@ $transition-duration: 0.3s;
   width: 100%; // Utilise toute la largeur disponible définie par le style inline
   box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
 
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     width: 335px;
   }
 }
@@ -52,7 +52,7 @@ $transition-duration: 0.3s;
   @include flex-center-space-between;
   @include responsive-width;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     height: 30px;
     font-size: 16px;
     padding: 10px;
@@ -77,7 +77,7 @@ $transition-duration: 0.3s;
   font-size: 18px;
   transition: max-height $transition-duration ease;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     font-size: 12px;
   }
 }
