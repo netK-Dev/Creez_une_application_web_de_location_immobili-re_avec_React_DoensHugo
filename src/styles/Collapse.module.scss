@@ -2,14 +2,11 @@
 
 // Variables
 $border-radius: 5px;
-$bg-color: #ff6060;
-$text-color: white;
-$content-bg-color: #f6f6f673;
 $transition-duration: 0.3s;
 
 // Mixins
 @mixin responsive-width {
-  width: 100%; // Utilise toute la largeur disponible définie par le style inline
+  width: 100%;
   box-sizing: border-box; // Inclut le padding et la bordure dans la largeur totale
 
   @media (max-width: 767px) {
@@ -40,10 +37,10 @@ $transition-duration: 0.3s;
   @include responsive-width;
 }
 
-.cont {
-  background-color: $bg-color;
+.collapse {
+  background-color: #ff6060;
   border-radius: $border-radius;
-  color: $text-color;
+  color: white;
   padding: 15px;
   font-size: 24px;
   font-weight: 700;
@@ -70,7 +67,7 @@ $transition-duration: 0.3s;
 
 .content {
   border-radius: 0 0 $border-radius $border-radius;
-  background-color: $content-bg-color;
+  background-color: #f6f6f673;
   max-height: 0;
   overflow: hidden;
   @include responsive-width;
@@ -90,7 +87,7 @@ $transition-duration: 0.3s;
 }
 
 .expanded {
-  max-height: 500px; // Ajustez cette valeur selon la taille du contenu
+  max-height: 500px;
 }
 
 .expanded .innerContent {

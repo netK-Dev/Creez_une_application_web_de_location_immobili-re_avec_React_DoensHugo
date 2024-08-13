@@ -18,7 +18,7 @@ const Collapse = ({ title, children, width }) => {
       className={`${styles.collapseContainer} ${styles.responsiveCollapse}`}
       style={{ maxWidth: width }} // Applique la largeur maximale fournie en prop
     >
-      <div className={styles.cont} onClick={toggleCollapse}>
+      <div className={styles.collapse} onClick={toggleCollapse}>
         <span>{title}</span>
         <span
           className={`${styles.arrow} ${isCollapsed ? '' : styles.rotated}`} // Ajoute une classe pour la rotation si déplié
