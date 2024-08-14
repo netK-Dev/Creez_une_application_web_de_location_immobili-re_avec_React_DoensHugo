@@ -15,7 +15,7 @@ const Collapse = ({ title, children, width }) => {
 
   return (
     <div
-      className={`${styles.collapseContainer} ${styles.responsiveCollapse}`}
+      className={styles.collapseContainer}
       style={{ maxWidth: width }} // Applique la largeur maximale fournie en prop
     >
       <div className={styles.collapse} onClick={toggleCollapse}>
