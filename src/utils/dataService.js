@@ -1,7 +1,7 @@
 // src/utils/dataService.js
 
 // Fonction pour charger les données à partir d'un fichier JSON
-export async function loadData() {
+export async function fetchData() {
   try {
     const response = await fetch('/dataTest.json'); // Effectue une requête pour obtenir les données JSON
     if (!response.ok) {

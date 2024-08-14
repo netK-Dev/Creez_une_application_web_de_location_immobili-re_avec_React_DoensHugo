@@ -8,15 +8,15 @@ import PropertyDetail from './pages/PropertyDetail';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/index.scss';
-import { loadData, preloadImages } from './utils/dataService';
+import { fetchData, preloadImages } from './utils/dataService';
 
 const App = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const loadData = async () => {
       try {
-        const apartmentsData = await loadData(); // Charger les données des appartements
+        const apartmentsData = await fetchData(); // Charger les données des appartements
         setData(apartmentsData); // Mettre à jour l'état avec les données chargées
         preloadImages(apartmentsData); // Précharger les images des appartements
       } catch (error) {
@@ -24,7 +24,7 @@ const App = () => {
       }
     };
 
-    fetchData();
+    loadData();
   }, []);
 
   return (
